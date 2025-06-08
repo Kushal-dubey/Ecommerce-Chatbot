@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ✅ Fixed Top Navbar -->
+<div class="navbar">
+    <div class="brand">E-commerce Chatbot</div>
+
+    <div class="nav-links">
+        <button id="logout-btn" class="logout">Logout</button>
+        <button onclick="showSection('chat')">Chatbot</button>
+        <button onclick="showSection('cart')">Cart</button>
+        <button onclick="showSection('admin')">Admin</button>
+
+    </div>
+</div>
+
+<!-- ✅ Main Content below navbar -->
+<main>
+    <!-- Chatbot Section -->
+    <div id="chat-section">
+        <div class="chat-container">
+            <div id="chat-box" class="chat-box"></div>
+            <div id="suggestion-box" class="suggestion-box"></div>
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type your message here..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div id="cart-section" style="display: none;">
+        <h3>Your Cart</h3>
+        <div id="cart-items"></div>
+    </div>
+
+    <!-- Admin Section -->
+    <div id="admin-section" style="display: none;">
+        <h3>Add New Product</h3>
+        <form id="product-form">
+            <input type="text" id="product-name" placeholder="Name" required />
+            <input type="text" id="product-category" placeholder="Category" required />
+            <input type="number" id="product-price" placeholder="Price" required />
+            <input type="number" id="product-rating" placeholder="Rating" step="0.1" required />
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+
+</main>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
